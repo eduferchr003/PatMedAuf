@@ -233,7 +233,7 @@ namespace PatMedAuf
             var dcm = DicomFile.Open(path);
             var img = new DicomImage(dcm.Dataset);
 
-            using (var rendered = img.RenderImage()) // IImage
+            using (var rendered = img.RenderImage()) // Image
             {
                 // AsClonedBitmap ist zuverlässig
                 return rendered.AsClonedBitmap();
